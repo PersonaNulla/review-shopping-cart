@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "imports": {
-    "#routes/*": "./src/routes/*.jsx"
+    "#routes/*": "./src/routes/*/*.jsx",
+    "#components/*": "./src/components/*/*.jsx",
+    "#layouts/*": "./src/layouts/*.jsx",
+    "#assets/*": "./src/assets/*"
   },
   "scripts": {
     "dev": "vite",
@@ -14,6 +17,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "lucide-react": "^1.61.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router": "^7.18.4"
