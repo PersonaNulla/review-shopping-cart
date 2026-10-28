@@ -7,6 +7,7 @@
     "#routes/*": "./src/routes/*/*.jsx",
     "#components/*": "./src/components/*/*.jsx",
     "#layouts/*": "./src/layouts/*.jsx",
+    "#public/*": "./public",
     "#assets/*": "./src/assets/*"
   },
   "scripts": {

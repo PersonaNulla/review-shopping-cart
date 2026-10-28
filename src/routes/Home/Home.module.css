@@ -1,0 +1,115 @@
+.preview {
+  padding: var(--space-xl) var(--space-s);
+}
+
+.flex-container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xl);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.quote {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3xs);
+  font-size: var(--step--2);
+  color: var(--emphasis-foreground);
+  letter-spacing: 3px;
+  margin-bottom: var(--space-l);
+}
+
+.quote-icon {
+  width: 1.2em;
+  height: 1.2em;
+  min-width: 12px;
+  min-height: 12px;
+}
+
+.heading {
+  font-size: calc(var(--step-6) * 1.05);
+  font-family: "Newsreader", serif;
+  font-weight: 500;
+  line-height: 0.9;
+  margin-bottom: var(--space-s);
+}
+
+.heading-emphasis {
+  font-style: italic;
+  letter-spacing: -0.01em;
+  color: var(--emphasis-foreground);
+}
+
+.subheading {
+  color: var(--muted-foreground);
+  line-height: 1.7;
+  margin-bottom: var(--space-l);
+  max-width: 40ch;
+}
+
+.store {
+  display: block;
+  width: fit-content;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: var(--space-2xs) var(--space-s);
+  border-radius: 999px;
+  font-size: 0.935em;
+}
+
+.store-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: sub;
+  margin-left: var(--space-3xs);
+}
+
+.merch-preview {
+  border-radius: var(--radius-lg);
+  max-width: 600px;
+}
+.merch-preview-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.benefits {
+  background-color: var(--benefits);
+  padding: var(--space-xl) var(--space-s);
+}
+
+.benefits-list {
+  margin: 0 auto;
+  max-width: 1240px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-l);
+}
+
+.benefit-item {
+}
+
+.benefit-heading {
+  font-size: var(--step-2);
+  font-family: "Newsreader", serif;
+  margin-bottom: var(--space-2xs);
+  font-weight: 400;
+}
+
+.benefit-description {
+  color: rgb(from var(--foreground) r g b/0.5);
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+  font-weight: 400;
+}
+
+@media (min-width: 767px) {
+  .flex-container-1,
+  .benefits-list {
+    flex-wrap: nowrap;
+  }
+}

@@ -1,5 +1,89 @@
+@font-face {
+  font-family: "Newsreader";
+  src: url("./assets/fonts/Newsreader/Newsreader-VariableFont_opsz\,wght.woff2")
+    format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("./assets/fonts/Newsreader/Newsreader-Italic-VariableFont_opsz\,wght.woff2")
+    format("woff2");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/DM_Mono/DMMono-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/DM_Mono/DMMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/DM_Mono/DMMono-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/DM_Mono/DMMono-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/DM_Mono/DMMono-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Mono";
+  src: url("./assets/fonts/DM_Mono/DMMono-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
+  --background: #f7f6f2;
   --foreground: #252525;
   --card: #ffffff;
   --card-foreground: #252525;
@@ -31,6 +115,8 @@
   --sidebar-accent-foreground: #353535;
   --sidebar-border: #e0e0e0;
   --sidebar-ring: #ababab;
+  --benefits: #ece9e1;
+  --emphasis-foreground: #9b6b4b;
 
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
@@ -49,6 +135,8 @@
   --step-3: clamp(1.944rem, 1.7405rem + 0.9044vw, 2.4414rem);
   --step-4: clamp(2.3328rem, 2.0387rem + 1.3072vw, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.384rem + 1.8461vw, 3.8147rem);
+  --step-6: clamp(3.3592rem, 2.7828rem + 2.5621vw, 4.7684rem);
+  --step-7: clamp(4.0311rem, 3.2418rem + 3.508vw, 5.9605rem);
 
   /* @link https://utopia.fyi/space/calculator?c=360,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
   --space-3xs: clamp(5px, 5px + 0vw, 5px);
@@ -73,4 +161,20 @@
 
   /* Custom pairs */
   --space-s-l: clamp(18px, 9px + 2.5vw, 40px);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--step--1);
+  color: var(--foreground);
 }
