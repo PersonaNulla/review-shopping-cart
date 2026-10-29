@@ -1,0 +1,29 @@
+.container {
+  grid-column: 1 / -1;
+  grid-row: 2 /3;
+
+  text-wrap: nowrap;
+}
+
+.list {
+  display: flex;
+  gap: var(--space-m);
+  font-weight: 400;
+}
+
+.tab {
+  color: var(--muted-foreground);
+}
+
+.active-tab {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+@media (min-width: 480px) {
+  .container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
+  }
+}

@@ -1,0 +1,32 @@
+.container {
+  background-color: var(--benefits);
+  padding: var(--space-xl) var(--space-s);
+}
+
+.list {
+  margin: 0 auto;
+  max-width: 1240px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-l);
+}
+
+.heading {
+  font-size: var(--step-2);
+  font-family: "Newsreader", serif;
+  margin-bottom: var(--space-2xs);
+  font-weight: 400;
+}
+
+.description {
+  color: rgb(from var(--foreground) r g b/0.5);
+  line-height: 1.5;
+  letter-spacing: -0.05rem;
+  font-weight: 400;
+}
+
+@media (min-width: 767px) {
+  .list {
+    flex-wrap: nowrap;
+  }
+}

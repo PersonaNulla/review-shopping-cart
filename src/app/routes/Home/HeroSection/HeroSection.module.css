@@ -1,8 +1,8 @@
-.preview {
+.container {
   padding: var(--space-xl) var(--space-s);
 }
 
-.flex-container-1 {
+.split-pane {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -36,7 +36,7 @@
   margin-bottom: var(--space-s);
 }
 
-.heading-emphasis {
+.emphasis {
   font-style: italic;
   letter-spacing: -0.01em;
   color: var(--emphasis-foreground);
@@ -70,6 +70,7 @@
   border-radius: var(--radius-lg);
   max-width: 600px;
 }
+
 .merch-preview-img {
   display: block;
   width: 100%;
@@ -77,39 +78,8 @@
   object-fit: cover;
 }
 
-.benefits {
-  background-color: var(--benefits);
-  padding: var(--space-xl) var(--space-s);
-}
-
-.benefits-list {
-  margin: 0 auto;
-  max-width: 1240px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-l);
-}
-
-.benefit-item {
-}
-
-.benefit-heading {
-  font-size: var(--step-2);
-  font-family: "Newsreader", serif;
-  margin-bottom: var(--space-2xs);
-  font-weight: 400;
-}
-
-.benefit-description {
-  color: rgb(from var(--foreground) r g b/0.5);
-  line-height: 1.5;
-  letter-spacing: -0.05rem;
-  font-weight: 400;
-}
-
 @media (min-width: 767px) {
-  .flex-container-1,
-  .benefits-list {
+  .split-pane {
     flex-wrap: nowrap;
   }
 }

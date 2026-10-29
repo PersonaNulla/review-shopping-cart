@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Newsreader";
-  src: url("./assets/fonts/Newsreader/Newsreader-VariableFont_opsz\,wght.woff2")
+  src: url("../assets/fonts/Newsreader/Newsreader-VariableFont_opsz\,wght.woff2")
     format("woff2");
   font-weight: 200 800;
   font-style: normal;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Newsreader";
-  src: url("./assets/fonts/Newsreader/Newsreader-Italic-VariableFont_opsz\,wght.woff2")
+  src: url("../assets/fonts/Newsreader/Newsreader-Italic-VariableFont_opsz\,wght.woff2")
     format("woff2");
   font-weight: 200 800;
   font-style: italic;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: "DM Sans";
-  src: url("./assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.woff2")
+  src: url("../assets/fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.woff2")
     format("woff2");
   font-weight: 100 900;
   font-style: normal;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: "DM Sans";
-  src: url("./assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.woff2")
+  src: url("../assets/fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.woff2")
     format("woff2");
   font-weight: 100 900;
   font-style: italic;
@@ -36,7 +36,7 @@
 
 @font-face {
   font-family: "DM Mono";
-  src: url("./assets/fonts/DM_Mono/DMMono-LightItalic.woff2") format("woff2");
+  src: url("../assets/fonts/DM_Mono/DMMono-LightItalic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -44,7 +44,7 @@
 
 @font-face {
   font-family: "DM Mono";
-  src: url("./assets/fonts/DM_Mono/DMMono-Medium.woff2") format("woff2");
+  src: url("../assets/fonts/DM_Mono/DMMono-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -52,7 +52,7 @@
 
 @font-face {
   font-family: "DM Mono";
-  src: url("./assets/fonts/DM_Mono/DMMono-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/DM_Mono/DMMono-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -60,7 +60,7 @@
 
 @font-face {
   font-family: "DM Mono";
-  src: url("./assets/fonts/DM_Mono/DMMono-Light.woff2") format("woff2");
+  src: url("../assets/fonts/DM_Mono/DMMono-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -68,7 +68,7 @@
 
 @font-face {
   font-family: "DM Mono";
-  src: url("./assets/fonts/DM_Mono/DMMono-Italic.woff2") format("woff2");
+  src: url("../assets/fonts/DM_Mono/DMMono-Italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -76,7 +76,7 @@
 
 @font-face {
   font-family: "DM Mono";
-  src: url("./assets/fonts/DM_Mono/DMMono-MediumItalic.woff2") format("woff2");
+  src: url("../assets/fonts/DM_Mono/DMMono-MediumItalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -177,4 +177,22 @@ body {
   font-weight: 400;
   font-size: var(--step--1);
   color: var(--foreground);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+li {
+  list-style-type: none;
 }

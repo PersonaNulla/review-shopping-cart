@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "imports": {
-    "#routes/*": "./src/routes/*/*.jsx",
+    "#routes/*": "./src/app/routes/*/*.jsx",
     "#components/*": "./src/components/*/*.jsx",
-    "#layouts/*": "./src/layouts/*.jsx",
+    "#layouts/*": "./src/components/layouts/*.jsx",
     "#public/*": "./public",
     "#assets/*": "./src/assets/*"
   },

@@ -1,5 +1,6 @@
 import { ShoppingBasket } from "lucide-react";
-import { NavLink, Link } from "react-router";
+import { Link } from "react-router";
+import Navbar from "../Navbar/Navbar";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -22,37 +23,9 @@ function Header() {
           />
           <span className={styles["cart-quantity"]}>(1)</span>
         </Link>
-        <nav
-          className={styles.nav}
-          aria-label="Main"
-        >
-          <ul className={styles["tabs-list"]}>
-            <li>
-              <TabItem to="/">Home</TabItem>
-            </li>
-            <li>
-              <TabItem to="/store">Store</TabItem>
-            </li>
-            <li>
-              <TabItem to="/checkout">Checkout (1)</TabItem>
-            </li>
-          </ul>
-        </nav>
+        <Navbar />
       </div>
     </header>
-  );
-}
-
-function TabItem({ to, children }) {
-  return (
-    <NavLink
-      {...{ to }}
-      className={({ isActive }) =>
-        isActive ? styles["active-tab"] : styles.tab
-      }
-    >
-      {children}
-    </NavLink>
   );
 }
 
