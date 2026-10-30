@@ -1,0 +1,30 @@
+.container {
+  padding: var(--space-xl) var(--space-s);
+  border-bottom: 1px solid var(--border);
+}
+
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.quote {
+  font-size: var(--step--2);
+  color: var(--emphasis-foreground);
+  letter-spacing: 3px;
+  margin-bottom: var(--space-m);
+}
+
+.heading {
+  font-size: var(--step-5);
+  font-family: "Newsreader", serif;
+  font-weight: 500;
+  line-height: 0.9;
+  margin-bottom: var(--space-xl);
+}
+
+.emphasis {
+  font-style: italic;
+  letter-spacing: -0.01em;
+  color: var(--emphasis-foreground);
+}
