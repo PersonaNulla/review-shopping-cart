@@ -118,6 +118,11 @@
   --benefits: #ece9e1;
   --emphasis-foreground: #9b6b4b;
 
+  --card-product-1: #d9b8a4;
+  --card-product-2: #aab5a0;
+  --card-product-3: #c5b8c9;
+  --card-product-4: #d1b98c;
+
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
