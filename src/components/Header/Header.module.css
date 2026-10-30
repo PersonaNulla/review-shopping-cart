@@ -3,6 +3,9 @@
   border-bottom: 1px solid var(--sidebar-border);
   padding: var(--space-s);
   padding-top: var(--space-m);
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .grid {
