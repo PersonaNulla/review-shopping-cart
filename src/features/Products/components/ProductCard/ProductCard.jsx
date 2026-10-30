@@ -14,7 +14,7 @@ function ProductCard({ id, title, price, category, image }) {
       <div className={styles[bgClassName]}>
         <img
           className={styles.image}
-          src={Hoodie}
+          src={image}
           alt=""
         />
       </div>
