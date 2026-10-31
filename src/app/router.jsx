@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "#routes/Home";
 import Store from "#routes/Store";
+import Checkout from "#routes/Checkout";
 import RootLayout from "#layouts/RootLayout";
 
 const routes = [
@@ -17,7 +18,7 @@ const routes = [
       },
       {
         path: "/checkout",
-        element: <h1>Checkout</h1>,
+        element: <Checkout />,
       },
     ],
   },
