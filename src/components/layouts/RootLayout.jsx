@@ -1,5 +1,5 @@
 import Header from "#components/Header";
-import { Outlet } from "react-router";
+import { Outlet, ScrollRestoration } from "react-router";
 import Footer from "#components/Footer";
 import styles from "./RootLayout.module.css";
 
@@ -9,6 +9,7 @@ function RootLayout() {
       <Header />
       <Outlet />
       <Footer />
+      <ScrollRestoration />
     </div>
   );
 }
