@@ -1,0 +1,84 @@
+.container {
+  background-color: var(--benefits);
+  padding: var(--space-m);
+  border-radius: var(--radius-xl);
+}
+
+.heading {
+  font-size: var(--step-1);
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  margin-bottom: var(--space-m);
+}
+
+.subtotal,
+.shipping,
+.total {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: -0.01em;
+}
+
+.label {
+  color: var(--muted-foreground);
+}
+
+.value {
+  font-family: "DM Mono", monospace;
+}
+
+.subtotal {
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-xs);
+}
+
+.shipping {
+  margin-bottom: var(--space-m);
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  font-size: var(--step-0);
+  font-family: "Newsreader", serif;
+  margin-bottom: var(--space-m);
+
+  .label {
+    color: inherit;
+  }
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--card-foreground);
+  border: none;
+  color: var(--card);
+  border-radius: 999px;
+  padding: var(--space-xs) 0;
+  margin-bottom: var(--space-xs);
+
+  .icon {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: middle;
+    margin-right: var(--space-3xs);
+  }
+}
+
+.small {
+  color: var(--muted-foreground);
+  font-size: var(--step--2);
+  text-align: center;
+}
+
+@media (min-width: 767px) {
+  .container {
+    align-self: flex-start;
+    flex-shrink: 0;
+    min-width: 340px;
+    position: sticky;
+    top: 15vh;
+    right: 0;
+  }
+}
