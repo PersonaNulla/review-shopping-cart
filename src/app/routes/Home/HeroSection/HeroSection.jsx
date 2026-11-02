@@ -26,8 +26,7 @@ function HeroSection() {
           </p>
           <Link
             className={styles.store}
-            to="/
-           store"
+            to="/store"
           >
             Grab some merch
             <ArrowRight
