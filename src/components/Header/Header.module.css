@@ -1,6 +1,6 @@
 .container {
-  background-color: var(--sidebar);
-  border-bottom: 1px solid var(--sidebar-border);
+  background-color: var(--navbar);
+  border-bottom: 1px solid var(--navbar-border);
   padding: var(--space-s);
   padding-top: var(--space-m);
   position: sticky;
@@ -48,7 +48,7 @@
 }
 
 .cart-quantity {
-  color: var(--emphasis-foreground);
+  color: var(--accent-foreground);
   letter-spacing: 1.5px;
 }
 
