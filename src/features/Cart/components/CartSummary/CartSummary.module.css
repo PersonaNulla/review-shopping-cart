@@ -57,6 +57,7 @@
   border-radius: 999px;
   padding: var(--space-xs) 0;
   margin-bottom: var(--space-xs);
+  cursor: pointer;
 
   .icon {
     width: 1.1em;
