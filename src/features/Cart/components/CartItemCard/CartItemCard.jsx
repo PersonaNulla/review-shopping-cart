@@ -1,10 +1,9 @@
 import styles from "./CartItemCard.module.css";
 import { Plus, Minus, Trash } from "lucide-react";
 import { randomClassNameRange } from "#utils/utils";
-import Hoodie from "#assets/images/hoodie Background Removed.png";
 
 function CartItem({ product, addToCart, subtractFromCart, removeFromCart }) {
-  const { id, title, price, description, category, image, quantity } = product;
+  const { id, title, price, category, image, quantity } = product;
 
   function handleAddToCart() {
     addToCart(product);
