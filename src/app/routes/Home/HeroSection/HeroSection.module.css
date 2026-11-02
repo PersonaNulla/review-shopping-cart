@@ -52,8 +52,8 @@
 .store {
   display: block;
   width: fit-content;
-  background-color: var(--primary);
-  color: var(--primary-foreground);
+  background-color: var(--card-foreground);
+  color: var(--card);
   padding: var(--space-2xs) var(--space-s);
   border-radius: 999px;
   font-size: 0.935em;
