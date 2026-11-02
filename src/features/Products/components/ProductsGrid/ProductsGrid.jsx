@@ -2,7 +2,7 @@ import ProductCard from "../ProductCard/ProductCard.jsx";
 import styles from "./ProductsGrid.module.css";
 import useProducts from "#features/Products/hooks/useProducts.js";
 import { useCartContext } from "#stores/Cart/cart-context.js";
-import Spinner from "#features/Products/Spinner/Spinner.jsx";
+import Spinner from "#features/Products/components/Spinner/Spinner.jsx";
 
 function ProductsGrid() {
   const [products, isLoading, error] = useProducts();
