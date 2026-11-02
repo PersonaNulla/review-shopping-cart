@@ -3,23 +3,30 @@ import { Plus, Minus, Trash } from "lucide-react";
 import { randomClassNameRange } from "#utils/utils";
 import Hoodie from "#assets/images/hoodie Background Removed.png";
 
-function CartItem({
-  id,
-  title,
-  price,
-  description,
-  category,
-  image,
-  quantity,
-}) {
+function CartItem({ product, addToCart, subtractFromCart, removeFromCart }) {
+  const { id, title, price, description, category, image, quantity } = product;
+
+  function handleAddToCart() {
+    addToCart(product);
+  }
+
+  function handleSubtractFromCart() {
+    subtractFromCart(id);
+  }
+
+  function handleRemoveFromcart() {
+    removeFromCart(id);
+  }
+
   const total = (price * quantity).toFixed(2);
   const imgBgClassName = randomClassNameRange("img-wrapper", "-", 1, 4);
+
   return (
     <article className={styles.container}>
       <div className={styles[imgBgClassName]}>
         <img
           className={styles.image}
-          src={Hoodie}
+          src={image}
           alt=""
         />
       </div>
@@ -29,16 +36,25 @@ function CartItem({
           <p className={styles.category}>{category}</p>
           <div className={styles.options}>
             <div className={styles.left}>
-              <button className={styles.btn}>
+              <button
+                className={styles.btn}
+                onClick={handleSubtractFromCart}
+              >
                 <Minus className={styles.icon} />
               </button>
               <p className={styles.quantity}>{quantity}</p>
-              <button className={styles.btn}>
+              <button
+                className={styles.btn}
+                onClick={handleAddToCart}
+              >
                 <Plus className={styles.icon} />
               </button>
             </div>
             <div className={styles.right}>
-              <button className={styles.btn}>
+              <button
+                className={styles.btn}
+                onClick={handleRemoveFromcart}
+              >
                 <Trash className={styles["delete-icon"]} />
               </button>
             </div>

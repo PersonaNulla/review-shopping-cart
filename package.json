@@ -10,7 +10,8 @@
     "#features/*": "./src/features/*",
     "#public/*": "./public",
     "#assets/*": "./src/assets/*",
-    "#utils/*": "./src/utils/*.js"
+    "#utils/*": "./src/utils/*.js",
+    "#stores/*": "./src/stores/*"
   },
   "scripts": {
     "dev": "vite",

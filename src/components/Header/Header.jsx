@@ -2,8 +2,10 @@ import { ShoppingBasket } from "lucide-react";
 import { Link } from "react-router";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Header.module.css";
+import { useCartContext } from "#stores/Cart/cart-context.js";
 
 function Header() {
+  const { cartItems } = useCartContext();
   return (
     <header className={styles.container}>
       <div className={styles.grid}>
@@ -21,7 +23,7 @@ function Header() {
             className={styles.icon}
             aria-hidden="true"
           />
-          <span className={styles["cart-quantity"]}>(1)</span>
+          <span className={styles["cart-quantity"]}>({cartItems.length})</span>
         </Link>
         <Navbar />
       </div>
