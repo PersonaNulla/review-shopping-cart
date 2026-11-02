@@ -4,10 +4,14 @@ import styles from "./ProductCard.module.css";
 import { randomClassNameRange } from "#features/Products/utils/utils.js";
 import { useState } from "react";
 
-function ProductCard({ id, title, price, category, image }) {
+function ProductCard({ id, title, price, category, image, onClick }) {
   const [bgClassName] = useState(
     randomClassNameRange("img-wrapper", "-", 1, 4),
   );
+
+  function handleClick() {
+    onClick({ id, title, price, category, image });
+  }
 
   return (
     <article className={styles.container}>
@@ -33,7 +37,10 @@ function ProductCard({ id, title, price, category, image }) {
           {category}
         </p>
       </div>
-      <button className={styles.btn}>
+      <button
+        className={styles.btn}
+        onClick={handleClick}
+      >
         Add to bag
         <Plus
           className={styles.icon}
