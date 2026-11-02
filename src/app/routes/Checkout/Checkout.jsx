@@ -1,5 +1,4 @@
-import CartContents from "#features/Cart/components/CartContents/CartContents.jsx";
-import CartSummary from "#features/Cart/components/CartSummary/CartSummary.jsx";
+import Cart from "#features/Cart/components/Cart/Cart.jsx";
 import styles from "./Checkout.module.css";
 
 function Checkout() {
@@ -10,10 +9,7 @@ function Checkout() {
         <h1 className={styles.heading}>
           Ready when <span className={styles.emphasis}>you are</span>.
         </h1>
-        <div className={styles.flex}>
-          <CartContents />
-          <CartSummary />
-        </div>
+        <Cart />
       </section>
     </main>
   );
