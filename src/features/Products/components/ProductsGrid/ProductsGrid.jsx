@@ -2,6 +2,7 @@ import ProductCard from "../ProductCard/ProductCard.jsx";
 import styles from "./ProductsGrid.module.css";
 import useProducts from "#features/Products/hooks/useProducts.js";
 import { useCartContext } from "#stores/Cart/cart-context.js";
+import Spinner from "#features/Products/Spinner/Spinner.jsx";
 
 function ProductsGrid() {
   const [products, isLoading, error] = useProducts();
@@ -9,7 +10,11 @@ function ProductsGrid() {
   const { addToCart } = useCartContext();
 
   if (isLoading) {
-    return <p>Loadng...</p>;
+    return (
+      <div className={styles.spinner}>
+        <Spinner />
+      </div>
+    );
   }
 
   if (error) {
