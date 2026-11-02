@@ -1,6 +1,7 @@
 .container {
   padding: var(--space-xl) var(--space-s);
   border-bottom: 1px solid var(--border);
+  flex-grow: 1;
 }
 
 .wrapper {
