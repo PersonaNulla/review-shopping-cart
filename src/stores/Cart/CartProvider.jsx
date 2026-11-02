@@ -44,11 +44,25 @@ function CartProvider({ children }) {
     setCartItems(next);
   }
 
+  function checkout() {
+    setCartItems([]);
+  }
+
+  function getCartValue() {
+    const total = cartItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0,
+    );
+    return total.toFixed(2);
+  }
+
   const value = {
     cartItems,
     addToCart,
     subtractFromCart,
     removeFromCart,
+    checkout,
+    getCartValue,
   };
 
   return <CartContext value={value}>{children}</CartContext>;
