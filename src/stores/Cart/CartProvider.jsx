@@ -56,6 +56,9 @@ function CartProvider({ children }) {
     return total.toFixed(2);
   }
 
+  function getCartSize() {
+    return cartItems.reduce((size, item) => size + item.quantity, 0);
+  }
   const value = {
     cartItems,
     addToCart,
@@ -63,6 +66,7 @@ function CartProvider({ children }) {
     removeFromCart,
     checkout,
     getCartValue,
+    getCartSize,
   };
 
   return <CartContext value={value}>{children}</CartContext>;

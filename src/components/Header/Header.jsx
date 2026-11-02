@@ -5,7 +5,8 @@ import styles from "./Header.module.css";
 import { useCartContext } from "#stores/Cart/cart-context.js";
 
 function Header() {
-  const { cartItems } = useCartContext();
+  const { getCartSize } = useCartContext();
+
   return (
     <header className={styles.container}>
       <div className={styles.grid}>
@@ -23,7 +24,7 @@ function Header() {
             className={styles.icon}
             aria-hidden="true"
           />
-          <span className={styles["cart-quantity"]}>({cartItems.length})</span>
+          <span className={styles["cart-quantity"]}>({getCartSize()})</span>
         </Link>
         <Navbar />
       </div>
