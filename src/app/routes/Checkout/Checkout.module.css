@@ -2,6 +2,7 @@
   padding: var(--space-xl) var(--space-s);
   border-bottom: 1px solid var(--border);
   position: relative;
+  flex: 1;
 }
 
 .wrapper {
@@ -28,16 +29,4 @@
   font-style: italic;
   letter-spacing: -0.01em;
   color: var(--emphasis-foreground);
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-l);
-}
-
-@media (min-width: 767px) {
-  .flex {
-    flex-direction: row;
-  }
 }
