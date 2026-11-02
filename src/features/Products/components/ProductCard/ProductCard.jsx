@@ -28,7 +28,7 @@ function ProductCard({ id, title, price, category, image, onClick }) {
           className={styles.price}
           aria-label="Price"
         >
-          {"$" + price}
+          {"$" + price.toFixed(2)}
         </p>
         <p
           className={styles.category}

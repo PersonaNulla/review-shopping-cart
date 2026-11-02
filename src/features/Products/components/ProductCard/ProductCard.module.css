@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  position: relative;
 }
 
 .img-wrapper {
@@ -27,7 +28,7 @@
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto;
   row-gap: var(--space-3xs);
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-l);
 }
 
 .title {
@@ -69,6 +70,9 @@
   background-color: transparent;
   font-size: calc(var(--step--1) * 0.9);
   cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .icon {
