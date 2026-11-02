@@ -1,4 +1,3 @@
-import Hoodie from "#assets/images/hoodie Background Removed.png";
 import { Plus } from "lucide-react";
 import styles from "./ProductCard.module.css";
 import { randomClassNameRange } from "#features/Products/utils/utils.js";
