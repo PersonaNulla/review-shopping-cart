@@ -1,5 +1,6 @@
 import CartItemCard from "../CartItemCard/CartItemCard";
 import styles from "./CartContents.module.css";
+import { useCartContext } from "#stores/Cart/cart-context.js";
 
 const cartItems = [
   {
@@ -103,12 +104,18 @@ const cartItems = [
 ];
 
 function CartContents() {
+  const { cartItems, addToCart, subtractFromCart, removeFromCart } =
+    useCartContext();
+
   return (
     <div className={styles.container}>
       {cartItems.map((item) => (
         <CartItemCard
           key={item.id}
-          {...item}
+          product={item}
+          addToCart={addToCart}
+          subtractFromCart={subtractFromCart}
+          removeFromCart={removeFromCart}
         />
       ))}
     </div>
