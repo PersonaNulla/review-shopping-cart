@@ -1,5 +1,6 @@
 .container {
-  background-color: var(--benefits);
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
   padding: var(--space-xl) var(--space-s);
 }
 

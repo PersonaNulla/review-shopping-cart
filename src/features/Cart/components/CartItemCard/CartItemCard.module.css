@@ -3,7 +3,7 @@
   gap: var(--space-s);
   padding: var(--space-m) 0;
   &:not(:last-child) {
-    border-bottom: 1px solid var(--ring);
+    border-bottom: 1px solid var(--border-dark);
   }
 }
 
@@ -64,7 +64,7 @@
 
   .left {
     gap: var(--space-xs);
-    border: 1px solid var(--ring);
+    border: 1px solid var(--border-dark);
     border-right: none;
     border-radius: 999px 0 0 999px;
   }

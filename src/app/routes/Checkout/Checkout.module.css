@@ -12,7 +12,7 @@
 
 .quote {
   font-size: var(--step--2);
-  color: var(--emphasis-foreground);
+  color: var(--accent-foreground);
   letter-spacing: 3px;
   margin-bottom: var(--space-m);
 }
@@ -28,5 +28,5 @@
 .emphasis {
   font-style: italic;
   letter-spacing: -0.01em;
-  color: var(--emphasis-foreground);
+  color: var(--accent-foreground);
 }

@@ -65,7 +65,7 @@
   align-items: center;
   gap: var(--space-3xs);
   border: none;
-  color: var(--emphasis-foreground);
+  color: var(--accent-foreground);
   text-transform: uppercase;
   background-color: transparent;
   font-size: calc(var(--step--1) * 0.9);
