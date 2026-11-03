@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import styles from "./CartSummary.module.css";
 import { useCartContext } from "#stores/Cart/cart-context.js";
+import Icon from "#components/Icon";
 
 function CartSummary() {
   const { getCartValue, checkout } = useCartContext();
@@ -26,7 +27,11 @@ function CartSummary() {
         className={styles.btn}
         onClick={checkout}
       >
-        <Check className={styles.icon} />
+        {/* <Check className={styles.icon} /> */}
+        <Icon
+          className={styles.icon}
+          name="check"
+        />
         Checkout
       </button>
 

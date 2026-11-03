@@ -1,13 +1,10 @@
 import ProductCard from "../ProductCard/ProductCard.jsx";
 import styles from "./ProductsGrid.module.css";
 import useProducts from "#features/Products/hooks/useProducts.js";
-import { useCartContext } from "#stores/Cart/cart-context.js";
 import Spinner from "#features/Products/components/Spinner/Spinner.jsx";
 
 function ProductsGrid() {
   const [products, isLoading, error] = useProducts();
-
-  const { addToCart } = useCartContext();
 
   if (isLoading) {
     return (
@@ -28,7 +25,6 @@ function ProductsGrid() {
           <ProductCard
             key={product.id}
             {...product}
-            onClick={addToCart}
           />
         );
       })}
