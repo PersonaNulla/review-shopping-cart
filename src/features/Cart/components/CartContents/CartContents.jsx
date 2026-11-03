@@ -3,8 +3,7 @@ import styles from "./CartContents.module.css";
 import { useCartContext } from "#stores/Cart/cart-context.js";
 
 function CartContents() {
-  const { cartItems, addToCart, subtractFromCart, removeFromCart } =
-    useCartContext();
+  const { cartItems } = useCartContext();
 
   return (
     <div className={styles.container}>
@@ -12,9 +11,6 @@ function CartContents() {
         <CartItemCard
           key={item.id}
           product={item}
-          addToCart={addToCart}
-          subtractFromCart={subtractFromCart}
-          removeFromCart={removeFromCart}
         />
       ))}
     </div>

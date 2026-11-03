@@ -1,12 +1,15 @@
-import { ShoppingBasket } from "lucide-react";
 import { Link } from "react-router";
 import Navbar from "../Navbar/Navbar";
 import styles from "./Header.module.css";
 import { useCartContext } from "#stores/Cart/cart-context.js";
+import Icon from "#components/Icon";
+
+function CartSize() {
+  const { getCartSize } = useCartContext();
+  return <span className={styles["cart-quantity"]}>({getCartSize()})</span>;
+}
 
 function Header() {
-  const { getCartSize } = useCartContext();
-
   return (
     <header className={styles.container}>
       <div className={styles.grid}>
@@ -20,11 +23,11 @@ function Header() {
           className={styles.checkout}
           to="/checkout"
         >
-          <ShoppingBasket
+          <Icon
             className={styles.icon}
-            aria-hidden="true"
+            name="shoppingBasket"
           />
-          <span className={styles["cart-quantity"]}>({getCartSize()})</span>
+          <CartSize />
         </Link>
         <Navbar />
       </div>

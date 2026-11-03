@@ -1,16 +1,34 @@
-import { Plus } from "lucide-react";
+import Icon from "#components/Icon";
 import styles from "./ProductCard.module.css";
 import { randomClassNameRange } from "#features/Products/utils/utils.js";
-import { useState } from "react";
+import { useMemo } from "react";
+import { useCartContext } from "#stores/Cart/cart-context.js";
 
-function ProductCard({ id, title, price, category, image, onClick }) {
-  const [bgClassName] = useState(
-    randomClassNameRange("img-wrapper", "-", 1, 4),
-  );
-
+function ProductCardOptions({ product }) {
+  const { addToCart } = useCartContext();
   function handleClick() {
-    onClick({ id, title, price, category, image });
+    addToCart(product);
   }
+
+  return (
+    <button
+      className={styles.btn}
+      onClick={handleClick}
+    >
+      Add to bag
+      <Icon
+        className={styles.icon}
+        name="plus"
+      />
+    </button>
+  );
+}
+
+function ProductCard({ id, title, price, category, image }) {
+  const bgClassName = useMemo(
+    () => randomClassNameRange("img-wrapper", "-", 1, 4),
+    [],
+  );
 
   return (
     <article className={styles.container}>
@@ -36,7 +54,7 @@ function ProductCard({ id, title, price, category, image, onClick }) {
           {category}
         </p>
       </div>
-      <button
+      {/* <button
         className={styles.btn}
         onClick={handleClick}
       >
@@ -45,7 +63,8 @@ function ProductCard({ id, title, price, category, image, onClick }) {
           className={styles.icon}
           aria-hidden="true"
         />
-      </button>
+      </button> */}
+      <ProductCardOptions product={{ id, title, price, category, image }} />
     </article>
   );
 }

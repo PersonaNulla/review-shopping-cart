@@ -1,24 +1,70 @@
 import styles from "./CartItemCard.module.css";
-import { Plus, Minus, Trash } from "lucide-react";
+import Icon from "#components/Icon";
 import { randomClassNameRange } from "#utils/utils";
+import { useMemo, memo } from "react";
+import { useCartContext } from "#stores/Cart/cart-context.js";
 
-function CartItem({ product, addToCart, subtractFromCart, removeFromCart }) {
-  const { id, title, price, category, image, quantity } = product;
+function CartItemOptions({ product }) {
+  const { addToCart, subtractFromCart, removeFromCart } = useCartContext();
 
   function handleAddToCart() {
     addToCart(product);
   }
 
   function handleSubtractFromCart() {
-    subtractFromCart(id);
+    subtractFromCart(product.id);
   }
 
   function handleRemoveFromcart() {
-    removeFromCart(id);
+    removeFromCart(product.id);
   }
 
-  const total = (price * quantity).toFixed(2);
-  const imgBgClassName = randomClassNameRange("img-wrapper", "-", 1, 4);
+  return (
+    <div className={styles.options}>
+      <div className={styles.left}>
+        <button
+          className={styles.btn}
+          onClick={handleSubtractFromCart}
+        >
+          <Icon
+            className={styles.icon}
+            name="minus"
+          />
+        </button>
+        <p className={styles.quantity}>{product.quantity}</p>
+        <button
+          className={styles.btn}
+          onClick={handleAddToCart}
+        >
+          <Icon
+            className={styles.icon}
+            name="plus"
+          />
+        </button>
+      </div>
+      <div className={styles.right}>
+        <button
+          className={styles.btn}
+          onClick={handleRemoveFromcart}
+        >
+          <Icon
+            className={styles["delete-icon"]}
+            name="trash"
+          />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+const CartItem = memo(({ product }) => {
+  const { title, price, category, image, quantity } = product;
+
+  const total = useMemo(() => (price * quantity).toFixed(2), [price, quantity]);
+  const imgBgClassName = useMemo(
+    () => randomClassNameRange("img-wrapper", "-", 1, 4),
+    [],
+  );
 
   return (
     <article className={styles.container}>
@@ -33,36 +79,12 @@ function CartItem({ product, addToCart, subtractFromCart, removeFromCart }) {
         <div className={styles.details}>
           <h2 className={styles.name}>{title}</h2>
           <p className={styles.category}>{category}</p>
-          <div className={styles.options}>
-            <div className={styles.left}>
-              <button
-                className={styles.btn}
-                onClick={handleSubtractFromCart}
-              >
-                <Minus className={styles.icon} />
-              </button>
-              <p className={styles.quantity}>{quantity}</p>
-              <button
-                className={styles.btn}
-                onClick={handleAddToCart}
-              >
-                <Plus className={styles.icon} />
-              </button>
-            </div>
-            <div className={styles.right}>
-              <button
-                className={styles.btn}
-                onClick={handleRemoveFromcart}
-              >
-                <Trash className={styles["delete-icon"]} />
-              </button>
-            </div>
-          </div>
+          <CartItemOptions product={product} />
         </div>
         <p className={styles.total}>{"$" + total}</p>
       </div>
     </article>
   );
-}
+});
 
 export default CartItem;
