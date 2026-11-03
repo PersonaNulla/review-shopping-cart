@@ -67,6 +67,11 @@
     border: 1px solid var(--border-dark);
     border-right: none;
     border-radius: 999px 0 0 999px;
+
+    .quantity {
+      width: 2ch;
+      text-align: center;
+    }
   }
 
   .right {

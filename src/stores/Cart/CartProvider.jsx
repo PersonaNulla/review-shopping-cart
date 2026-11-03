@@ -12,7 +12,9 @@ function CartProvider({ children }) {
         return item;
       }
       isFound = true;
-      return { ...item, quantity: item.quantity + 1 };
+      const newQuantity =
+        item.quantity + 1 < 100 ? item.quantity + 1 : item.quantity;
+      return { ...item, quantity: newQuantity };
     });
 
     if (!isFound) {
